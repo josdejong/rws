@@ -1,0 +1,20 @@
+{
+  "name": "rws",
+  "description": "Reconnecting WebSocket for node.js and the browser",
+  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/josdejong/rws.git"
+  },
+  "dependencies": {
+    "emitter-component": "^1.1.1",
+    "ws": "^0.4.31"
+  },
+  "scripts": {
+    "build": "browserify ./lib/client.js -o ./dist/rws.js -s rws -x ws; uglifyjs ./dist/rws.js -o ./dist/rws.min.js"
+  },
+  "devDependencies": {
+    "browserify": "^5.9.1",
+    "uglify-js": "^2.4.15"
+  }
+}
