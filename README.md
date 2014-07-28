@@ -1,13 +1,13 @@
 rws
 ===
 
-A reconnecting WebSocket for node.js and the browser.
+A reconnecting WebSocket for node.js and the browser. With `rws`, the internet connection can go down temporarily without server nor client being bothered. Also, both server and client can be safely restarted, without the other side noticing.
 
 Features:
 
 - Automatically reconnect closed sockets.
-- Messages are queued while reconnecting, both server side as well as client side.
-- Client works both in the browser and in node.js.
+- Queue messages while reconnecting, both client side as well as server side.
+- Client side works both in the browser and in node.js.
 
 `rws` builds upon the [`ws`](https://github.com/einaros/ws) WebSocket library.
 
@@ -68,6 +68,12 @@ setInterval(function () {
 ## API
 
 TODO: describe API
+
+
+## Roadmap
+
+- Add unit tests.
+- Complete documentation, add more examples.
 
     
 ## Build

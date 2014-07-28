@@ -70,7 +70,7 @@ function ReconnectingWebSocket (url, options) {
       }
 
       // flush all messages in the queue (if any)
-      console.log('flush messages ' + me.queue);
+      //console.log('flush messages ' + me.queue);
       while (me.queue.length > 0) {
         var data = me.queue.shift();
         me.socket.send(data);
@@ -140,7 +140,7 @@ ReconnectingWebSocket.prototype.send = function (data) {
   else {
     // if not open but reconnecting, queue the request
     this.queue.push(data);
-    console.log('queue message ' + data);
+    //console.log('queue message ' + data);
   }
 };
 
